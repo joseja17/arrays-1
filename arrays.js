@@ -7,7 +7,12 @@
 //"red", "blue", "brown" in the array.
 
   //Code here
-
+  var rubberDucks = [
+    "yellow", 
+    "red", 
+    "blue", 
+    "brown" 
+  ]
 
 //////////////////PROBLEM 2////////////////////
   
@@ -16,13 +21,13 @@
 //What is the first numbered index of an array?
 
   // var answer = 1
-  // var answer = 0
+  var answer = 0
 
 //How do you access the length of an array, such as the array
 //you created above called rubberDucks?
 
   // var arrayLength = Array.length(rubberDucks)
-  // var arrayLength = rubberDucks.length
+  var arrayLength = rubberDucks.length
   // var arrayLength = rubberDucks.len
   // var arrayLength = rubberDucks.length()
 
@@ -34,7 +39,9 @@
 //parameter: an array, and returns the last element of the array.
 //The passed-in array should NOT be modified.
 
-  //Code here
+function getLast(arr){
+   return arr.slice(-1)[0]
+}
 
 
 //////////////////PROBLEM 4////////////////////
@@ -44,9 +51,11 @@
 //at the numbered index of that array.
 //The passed-in array should NOT be modified.
 
-  //Code here
-
-
+function getElement(arr, index){
+  for (var i=0; i< arr.length; i++){
+    return arr[index];
+  }
+}
 //////////////////PROBLEM 5////////////////////
 
 //Create a function called changeElement that takes in three 
@@ -54,7 +63,11 @@
 //should change the element at the numbered index of that array
 //to the given value. You do not need to return the array.
 
-  //Code here
+ function changeElement(arr, index, value){
+  for (var i=0; i< arr.length; i++){
+    return arr[index]=value
+  }
+ }
 
 
 //////////////////PROBLEM 6////////////////////
@@ -62,4 +75,7 @@
 //Create a function called trim that takes in an array and removes 
 //the last element. trim should return the array.
 
-  //Code here
+function trim (arr){
+  arr.pop();
+  return arr
+}
